@@ -1,40 +1,50 @@
 # 11 Prompt Engineering: Weather Forecast
 
-## Your Task
+## Description
 
-Your Challenge this week is to complete a Weather Forecast API that calls the OpenAI API to retrieve a five-day weather forecast for a given city, in the style of a sports announcer, and return a JSON response.
+This project is a Weather Forecast API that retrieves a five-day weather forecast for a given city and presents it in the style of a sports announcer. The purpose of this project is to enhance prompt engineering skills by integrating the OpenAI API to generate creative and engaging weather reports.
 
-**Important**: This Challenge is optional. To complete this optional Challenge, you'll need an OpenAI API key. Note that there is a cost associated with making requests using an OpenAI API key.
+The application follows a simple workflow:  
+- A user submits a city name through a `POST` request.  
+- The backend fetches real-time weather data.  
+- The OpenAI API is used to transform this data into a lively sports announcer-style forecast.  
+- The formatted response is returned as a JSON object.  
 
-Starter code for the Weather Forecast API has already been created. It's your job to complete the code and integrate the OpenAI API to provide the response.
+This project is an optional challenge designed to reinforce skills in API integration, Express.js, and working with environment variables. Users can modify the prompt style to receive weather forecasts in different tones, such as those of a cartoon character or a historical figure. The project also emphasizes the importance of securing API keys and testing API endpoints using Insomnia.
 
-* For more information on how to get your OpenAI API key, refer to the [Full-Stack Blog post on OpenAI Account Setup](https://coding-boot-camp.github.io/full-stack/ai/openai-account-setup-guide).
+## Table of Contents
 
-* For more information on how to work with the OpenAI API, refer to the [OpenAI API documentation](https://platform.openai.com/docs/overview).
+- [Usage](#usage)
+- [Instructions](#instructions)
+- [Key Features](#key-features)
+- [Sample Input](#sample-input)
+- [Sample Output](#sample-output)
+- [Technology Stack](#technology-stack)
+- [Additional Resources](#additional-resources)
 
-> **important** Make sure to download and unzip the starter code files and make your own repository with the starter code.
+## Usage
 
-Before you start, download the [starter code](https://static.bc-edx.com/coding/software-dev/11-Prompt-Engineering/Develop.zip).
+To start the application, follow these steps:
 
-## User Story
-
-```md
-AS A traveler
-I WANT to see the five-day weather forecast for a city in the style of a sports announcer
-SO THAT I can plan a trip
+1. Install dependencies:
+```bash
+npm install
 ```
 
-## Acceptance Criteria
+2. Set up your .env file with your OpenAI API key
 
-```md
-GIVEN a weather forecast API
-WHEN I search for a city
-THEN I am presented with the five-day weather forecast for that city in the style of a sports announcer
+3. Run the server:
+```bash
+npm start
 ```
 
-## Sample Input and Output
+4. Use Insomnia or Postman to send a `POST` request to:
 
-To meet the acceptance criteria for this application, you might provide the following input:
+```bash
+http://localhost:3000/forecast
+```
+
+With the following JSON body:
 
 ```json
 {
@@ -42,7 +52,45 @@ To meet the acceptance criteria for this application, you might provide the foll
 }
 ```
 
-This would then return the following output:
+5. Receive a five-day weather forecast styled as a sports announcer’s report.
+
+## Instructions
+
+1. Clone the repository and navigate to the project directory.
+
+2. Install all necessary dependencies using npm install.
+
+3. Create a .env file and add your OpenAI API key.
+
+4. Start the application using npm start.
+
+5. Open Insomnia or Postman and send a request to test the API.
+
+6. Modify the OpenAI prompt in the code if you'd like to change the forecast style.
+
+## Key Features
+
+* Fetches a five-day weather forecast based on a user-provided city.
+
+* Uses the OpenAI API to transform weather data into an engaging sports announcer-style report.
+
+* Allows users to customize the forecast style.
+
+* Provides JSON-formatted responses for easy integration with front-end applications.
+
+* Secures API keys using an .env file.
+
+* Enables API testing through Insomnia or Postman.
+
+## Sample Input
+
+```json
+{
+  "location": "Sacramento CA"
+}
+```
+
+## Sample Output
 
 ```json
 {
@@ -56,29 +104,19 @@ This would then return the following output:
 }
 ```
 
-## Getting Started
+## Technology Stack
 
-* You'll need to write code in the `server.ts` file to complete the Weather Forecast API.
+* **Node.js & Express.js:** Handles API requests and responses.
 
-  * Follow the `TODO` comments to complete the missing portions of the code.
+* **OpenAI API:** Generates creative weather forecasts based on provided weather data.
 
-* You'll also need to provide your OpenAI API key in an .env file.
+* **dotenv:** Manages environment variables securely.
 
-  * An example .env file is provided named `.env.EXAMPLE`.
+* **Insomnia/Postman:** Used for testing API endpoints.
 
-* Use Insomnia to test the Weather Forecast API.
+## Additional Resources
 
-* `POST /forecast` should accept a request body with a location, call the OpenAI API to get a five-day weather forecast in the style of a sports announcer, and then return the forecast as JSON data in the response.
+* Learn how to set up an OpenAI API key: Full-Stack Blog: [OpenAI Account Setup Guide](https://coding-boot-camp.github.io/full-stack/ai/openai-account-setup-guide)
 
-**Note**: This Challenge is optional, so feel free to add your own touches to it. Instead of using a sports announcer style, would you prefer to receive the five-day weather forecast in the style of a cartoon character or a famous artist? Be creative!
+* OpenAI API Documentation: [OpenAI API Docs](https://platform.openai.com/docs/overview)
 
-## Grading Requirements
-
-**Important**: This Challenge is _optional_ and is **not graded**.
-
-Because this Challenge is optional and ungraded, you won't submit your code repository or a deployed application. However, you may want to compare your code to one potential solution for this Challenge.
-
-**Near the end of Module 12, you may ask your instructor to provide the solution for the Challenge**. Remember that this solution is just one potential way to create this application, and that your code may not match the solution completely.
-
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

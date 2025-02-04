@@ -1,4 +1,4 @@
-# 11 Prompt Engineering: Weather Forecast
+# Prompt Engineering: Weather Forecast
 
 ## Description
 

@@ -1,6 +1,6 @@
 # Prompt Engineering: Weather Forecast
 
-## Description
+## Project Overview
 
 This project is a Weather Forecast API that retrieves a five-day weather forecast for a given city and presents it in the style of a sports announcer. The purpose of this project is to enhance prompt engineering skills by integrating the OpenAI API to generate creative and engaging weather reports.
 
@@ -24,63 +24,41 @@ This project is an optional challenge designed to reinforce skills in API integr
 
 ## Usage
 
-To start the application, follow these steps:
+To start the application, run the following command in your terminal:
 
-1. Install dependencies:
+### 1. Install dependencies
 ```bash
 npm install
 ```
 
-2. Set up your .env file with your OpenAI API key
+### 2. Set up your `.env` file with your OpenAI API key
 
-3. Run the server:
+### 3. Run the server
 ```bash
-npm start
+npm run start
 ```
 
-4. Use Insomnia or Postman to send a `POST` request to:
+### 4. Use Insomnia or Postman to send a `POST` request to `http://localhost:3000/forecast`
 
-```bash
-http://localhost:3000/forecast
-```
-
-With the following JSON body:
-
-```json
-{
-  "location": "Sacramento CA"
-}
-```
-
-5. Receive a five-day weather forecast styled as a sports announcer’s report.
+### 5. Receive a five-day weather forecast styled as a sports announcer’s report
 
 ## Instructions
 
 1. Clone the repository and navigate to the project directory.
-
-2. Install all necessary dependencies using npm install.
-
-3. Create a .env file and add your OpenAI API key.
-
-4. Start the application using npm start.
-
+2. Install all necessary dependencies using `npm install`.
+3. Create a `.env` file and add your OpenAI API key.
+4. Start the application using `npm run start`.
 5. Open Insomnia or Postman and send a request to test the API.
-
 6. Modify the OpenAI prompt in the code if you'd like to change the forecast style.
 
 ## Key Features
 
-* Fetches a five-day weather forecast based on a user-provided city.
-
-* Uses the OpenAI API to transform weather data into an engaging sports announcer-style report.
-
+* Secures API keys using an `.env` file.
 * Allows users to customize the forecast style.
-
-* Provides JSON-formatted responses for easy integration with front-end applications.
-
-* Secures API keys using an .env file.
-
 * Enables API testing through Insomnia or Postman.
+* Fetches a five-day weather forecast based on a user-provided city.
+* Provides JSON-formatted responses for easy integration with front-end applications.
+* Uses the OpenAI API to transform weather data into an engaging sports announcer-style report.
 
 ## Sample Input
 
@@ -106,17 +84,14 @@ With the following JSON body:
 
 ## Technology Stack
 
-* **Node.js & Express.js:** Handles API requests and responses.
-
-* **OpenAI API:** Generates creative weather forecasts based on provided weather data.
-
+This project relies on the following tools and technologies:
 * **dotenv:** Manages environment variables securely.
-
 * **Insomnia/Postman:** Used for testing API endpoints.
+* **Node.js & Express.js:** Handles API requests and responses.
+* **OpenAI API:** Generates creative weather forecasts based on provided weather data.
 
 ## Additional Resources
 
-* Learn how to set up an OpenAI API key: Full-Stack Blog: [OpenAI Account Setup Guide](https://coding-boot-camp.github.io/full-stack/ai/openai-account-setup-guide)
+OpenAI Account Setup Guide [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/ai/openai-account-setup-guide)
 
-* OpenAI API Documentation: [OpenAI API Docs](https://platform.openai.com/docs/overview)
-
+OpenAI API Documentation: [OpenAI API Docs](https://platform.openai.com/docs/overview)
